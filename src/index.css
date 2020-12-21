@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* .slick-dots {
+  background-color: green;
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.slick-dots li, .slick-dots li button {
+  width: 100%;
+  background-color: gray;
+}
+
+.slick-dots li button::before {
+  background-color: blue;
+  width: 33%;
+} */
+
+body {
+  background-color: black;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 'content slider';
+  grid-template-columns: 50% 50%;
+  background-color: red;
+}
+
+.content {
+  grid-area: 'content';
+  background-color: purple
+}
+
+.slider {
+  grid-area: 'slider';
+  background-color: blue;
+}
+
+.custom-dot {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.custom-dot li:first-child .div-slider .barra{
+  border-radius: 10px 0 0 10px;
+}
+
+.custom-dot li:last-child  .div-slider .barra{
+  border-radius: 0 10px 10px 0;
+}
+
+.custom-dot li {
+  width: 100%;
+}
+
+.div-slider {
+  /* background-color: red; */
+  width: 100%;
+  content: '0';
+  cursor: pointer;
+}
+
+.div-slider p{
+  text-align: center;
+}
+
+.div-slider .barra{
+  width: 100%;
+}
+
+.custom-dot li .div-slider .barra{
+  background-color: red;
+}
+
+.custom-dot li.slick-active p{
+  color: aqua;
+}
+
+.custom-dot li.slick-active .barra {
+  background-color: yellow;
+}
+
+.slide {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.slide img {
+  margin: auto;
 }
